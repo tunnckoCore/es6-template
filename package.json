@@ -1,6 +1,6 @@
 {
   "name": "es6-template",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Easy and small template engine for the browser and nodejs.",
   "repository": "tunnckoCore/es6-template",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
