@@ -15,7 +15,22 @@ npm i es6-template --save
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var es6Template = require('es6-template')
+var template = require('es6-template')
+
+template('foo ${bar} baz ${quux}', {bar: 'bar'}, {quux: 'QUUX'})
+//=> 'foo bar baz QUUX'
+
+var fn = template.compile('Hello ${place} and ${user.name}!')
+fn({place: 'world', user: {name: 'Charlike'}})
+//=> 'Hello world and Charlike!'
+
+template.render('Hello ${place} and ${user.name}!', {
+  place: 'world',
+  user: {
+    name: 'Charlike'
+  }
+})
+//=> 'Hello world and Charlike!'
 ```
 
 
