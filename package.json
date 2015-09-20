@@ -1,0 +1,32 @@
+{
+  "name": "es6-template",
+  "version": "0.0.0",
+  "description": "Easy and small template engine for the browser and nodejs.",
+  "repository": "tunnckoCore/es6-template",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "es6-template-regex": "^0.1.1",
+    "extend-shallow": "^2.0.1",
+    "get-value": "^1.2.1",
+    "sliced": "^1.0.1"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "easy",
+    "engine",
+    "es",
+    "regex",
+    "simple",
+    "template"
+  ]
+}
