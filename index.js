@@ -9,17 +9,17 @@
 
 var sliced = require('sliced')
 var extend = require('extend-shallow')
+var regex = require('es6-template-regex')
 var get = require('get-value')
-var re = require('es6-template-regex')
 
 function template (str) {
   var data = {}
   sliced(arguments, 1).forEach(function (obj) {
     data = extend(data, obj)
   })
-  return str.replace(re(), function (m, prop) {
+  return str.replace(regex(), function (m, prop) {
     if (prop && prop.indexOf('.') !== -1) {
-      return get(data, prop)
+      return get(data, prop, true)
     }
     return data[prop] || prop
   })
