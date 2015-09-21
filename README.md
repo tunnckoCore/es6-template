@@ -15,21 +15,55 @@ npm i es6-template --save
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var template = require('es6-template')
+var es6template = require('es6-template')
+```
 
-template('foo ${bar} baz ${quux}', {bar: 'bar'}, {quux: 'QUUX'})
+### [es6template](./index#L15)
+> Acts like `.render` by default. Renders given `str` with `locals`.
+
+- `str` **{String}** template to populate with `locals`
+- `locals` **{Object}** locals object
+- `returns` **{String}** rendered string
+
+**Example**
+
+```js
+es6template('foo ${bar} baz ${quux}', {bar: 'bar'}, {quux: 'QUUX'})
 //=> 'foo bar baz QUUX'
+```
 
-var fn = template.compile('Hello ${place} and ${user.name}!')
-fn({place: 'world', user: {name: 'Charlike'}})
-//=> 'Hello world and Charlike!'
+### [.render](./index#L28)
+> Renders given `str` with `locals`. You can give unlimited number of object 
+arguments after the first - they would be merged and passed as single locals object.
 
-template.render('Hello ${place} and ${user.name}!', {
+- `str` **{String}** template to populate with `locals`
+- `locals` **{Object}** locals object
+- `returns` **{String}** rendered string
+
+**Example**
+
+```js
+es6template.render('Hello ${place} and ${user.name}!', {
   place: 'world',
   user: {
     name: 'Charlike'
   }
 })
+//=> 'Hello world and Charlike!'
+```
+
+### [.compile](./index#L29)
+> Compiles given string and returns function which accepts
+ unlimited number of `locals` object arguments.
+
+- `str` **{String}** template to populate
+- `returns` **{Function}** which accepts `locals` objects
+
+**Example**
+
+```js
+var fn = es6template.compile('Hello ${place} and ${user.name}!')
+fn({place: 'world', user: {name: 'Charlike'}})
 //=> 'Hello world and Charlike!'
 ```
 
