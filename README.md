@@ -68,6 +68,16 @@ fn({place: 'world', user: {name: 'Charlike'}})
 ```
 
 
+## Related
+- [es6-template-regex](https://github.com/jonschlinkert/es6-template-regex): Regular expression for matching es6 template delimiters in a string.
+- [es6-template-strings](https://github.com/medikoo/es6-template-strings): Compile and resolve template strings notation as specified in ES6
+- [gulp-es6-template](https://github.com/tunnckoCore/gulp-es6-template): Gulp plugin for `es6-template` - easy and small template engine.
+- [gulp-es6-template-strings](https://github.com/tunnckoCore/gulp-es6-template-strings): Gulp plugin for `es6-template-strings` package.
+- [j140](https://github.com/tunnckoCore/j140): Javascript template engine in just 140 bytes, for browser and node - by Jed Schmidt
+- [jstransformer-es6-template](https://github.com/tunnckoCore/jstransformer-es6-template): es6-template support for JSTransformers
+- [jstransformer-es6-template-strings](https://github.com/jstransformers/jstransformer-es6-template-strings): es6-template-strings support for JSTransformers
+
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/es6-template/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
