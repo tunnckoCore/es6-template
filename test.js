@@ -54,3 +54,9 @@ test('should es6template.render() be same as es6template()', function (done) {
   test.strictEqual(actual, 'foo QUUX baz')
   done()
 })
+
+test('should be able to escape dot property paths', function (done) {
+  var actual = template.render('foo ${foo\\.bar} baz', {'foo.bar': '~BAR~'})
+  test.strictEqual(actual, 'foo ~BAR~ baz')
+  done()
+})
