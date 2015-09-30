@@ -18,27 +18,27 @@ npm i es6-template --save
 var es6template = require('es6-template')
 ```
 
-### [es6template](./index#L15)
+### [es6template](./index#L31)
 > Acts like `.render` by default. Renders given `str` with `locals`.
 
 - `str` **{String}** template to populate with `locals`
 - `locals` **{Object}** locals object
-- `returns` **{String}** rendered string
+- `return` **{String}** rendered string
 
 **Example**
 
 ```js
-es6template('foo ${bar} baz ${quux}', {bar: 'bar'}, {quux: 'QUUX'})
-//=> 'foo bar baz QUUX'
+es6template('foo ${bar} baz ${quux}', {bar: 'BAR'}, {quux: 'QUUX'})
+//=> 'foo BAR baz QUUX'
 ```
 
-### [.render](./index#L28)
+### [.render](./index#L58)
 > Renders given `str` with `locals`. You can give unlimited number of object 
-arguments after the first - they would be merged and passed as single locals object.
+arguments after the first - they will be merged and passed as single locals object.
 
 - `str` **{String}** template to populate with `locals`
 - `locals` **{Object}** locals object
-- `returns` **{String}** rendered string
+- `return` **{String}** rendered string
 
 **Example**
 
@@ -52,12 +52,12 @@ es6template.render('Hello ${place} and ${user.name}!', {
 //=> 'Hello world and Charlike!'
 ```
 
-### [.compile](./index#L29)
+### [.compile](./index#L79)
 > Compiles given string and returns function which accepts
  unlimited number of `locals` object arguments.
 
 - `str` **{String}** template to populate
-- `returns` **{Function}** which accepts `locals` objects
+- `return` **{Function}** which accepts `locals` objects
 
 **Example**
 
