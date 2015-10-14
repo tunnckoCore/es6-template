@@ -60,3 +60,9 @@ test('should be able to escape dot property paths', function (done) {
   test.strictEqual(actual, 'foo ~BAR~ baz')
   done()
 })
+
+test('should render empty strings correctly', function (done) {
+  var actual = template.render('hello ${name}!', {name: ''})
+  test.strictEqual(actual, 'hello !')
+  done()
+})
