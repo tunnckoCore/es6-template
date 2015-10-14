@@ -101,6 +101,6 @@ function templateFn (str) {
     if (prop && prop.indexOf('.') !== -1) {
       return get(data, prop, true)
     }
-    return data[prop] || prop
+    return typeof data[prop] !== 'undefined' ? data[prop] : ''
   })
 }
