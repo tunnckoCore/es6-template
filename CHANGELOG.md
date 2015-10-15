@@ -1,5 +1,9 @@
 
 
+## 1.0.3 - 2015-10-15
+- Release v1.0.3 / npm@v1.0.3
+- use `lazy-cache` - add `utils.js` for browserify-friendly lazyness
+
 ## 1.0.2 - 2015-10-15
 - Release v1.0.2 / npm@v1.0.2
 - update travis
