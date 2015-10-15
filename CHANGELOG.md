@@ -1,5 +1,11 @@
 
 
+## 1.0.2 - 2015-10-15
+- Release v1.0.2 / npm@v1.0.2
+- update travis
+- add one more test
+- merge #1 - render empty strings like ES6 does
+
 ## 1.0.1 - 2015-10-01
 - Release v1.0.1 / npm@v1.0.1
 - update and docs
