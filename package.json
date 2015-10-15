@@ -13,13 +13,15 @@
     "es6-template-regex": "^0.1.1",
     "extend-shallow": "^2.0.1",
     "get-value": "^1.2.1",
+    "lazy-cache": "^0.2.3",
     "sliced": "^1.0.1"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "keywords": [
     "easy",

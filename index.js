@@ -7,10 +7,7 @@
 
 'use strict'
 
-var sliced = require('sliced')
-var extend = require('extend-shallow')
-var regex = require('es6-template-regex')
-var get = require('get-value')
+var utils = require('./utils')
 
 /**
  * > Acts like `.render` by default.
@@ -79,8 +76,8 @@ template.render = function render (str, locals) {
  */
 template.compile = function compile (str) {
   return function (locals) {
-    sliced(arguments).forEach(function (obj) {
-      locals = extend(locals, obj)
+    utils.sliced(arguments).forEach(function (obj) {
+      locals = utils.extendShallow(locals, obj)
     })
     return templateFn(str, locals)
   }
@@ -94,12 +91,12 @@ template.compile = function compile (str) {
  */
 function templateFn (str) {
   var data = {}
-  sliced(arguments, 1).forEach(function (obj) {
-    data = extend(data, obj)
+  utils.sliced(arguments, 1).forEach(function (obj) {
+    data = utils.extendShallow(data, obj)
   })
-  return str.replace(regex(), function (m, prop) {
+  return str.replace(utils.regex(), function (m, prop) {
     if (prop && prop.indexOf('.') !== -1) {
-      return get(data, prop, true)
+      return utils.getValue(data, prop, true)
     }
     return typeof data[prop] !== 'undefined' ? data[prop] : ''
   })
