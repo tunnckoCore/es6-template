@@ -4,6 +4,7 @@ sudo: false
 node_js:
   - "0.10"
   - "0.12"
+  - "4.2"
   - "4"
 
 notifications:
@@ -16,13 +17,12 @@ before_script:
   - standard
 
 script:
-  - npm install istanbul-harmony
-  - node --harmony node_modules/.bin/istanbul cover test.js
+  - npm install istanbul
+  - istanbul cover test.js
 
 after_success:
   - npm install coveralls
-  - cat coverage/lcov.info | coveralls
-  - mv coverage/lcov.info .
+  - cat ./coverage/lcov.info | coveralls
 
 matrix:
   allow_failures:
