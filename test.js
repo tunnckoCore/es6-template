@@ -66,3 +66,9 @@ test('should render empty strings correctly', function (done) {
   test.strictEqual(actual, 'hello !')
   done()
 })
+
+test('should render zero correctly', function (done) {
+  var actual = template.render('hello ${name}!', {name: 0})
+  test.strictEqual(actual, 'hello 0!')
+  done()
+})
