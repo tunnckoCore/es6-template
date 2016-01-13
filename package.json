@@ -7,6 +7,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prebuild": "npm install && npm test && mkdirp dist",
+    "build": "npm run bundle && npm run standalone",
+    "bundle": "browserify -dr ./index.js:es6-template -o dist/es6-template.js",
+    "postbundle": "uglifyjs dist/es6-template.js -m -c -o dist/es6-template.min.js",
+    "standalone": "browserify -ds es6-template index.js -o dist/es6-template.standalone.js",
+    "poststandalone": "uglifyjs dist/es6-template.standalone.js -m -c -o dist/es6-template.standalone.min.js",
     "test": "standard && node test.js"
   },
   "dependencies": {
@@ -18,7 +24,9 @@
     "sliced": "^1.0.1"
   },
   "devDependencies": {
-    "assertit": "^0.1.0"
+    "assertit": "^0.1.0",
+    "browserify": "^13.0.0",
+    "uglify-js": "^2.6.1"
   },
   "files": [
     "index.js",
@@ -36,5 +44,10 @@
     "string",
     "template",
     "tpl"
-  ]
+  ],
+  "standard": {
+    "ignore": [
+      "dist/**"
+    ]
+  }
 }
