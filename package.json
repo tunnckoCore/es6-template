@@ -12,8 +12,8 @@
   "dependencies": {
     "es6-template-regex": "^0.1.1",
     "extend-shallow": "^2.0.1",
-    "get-value": "^1.2.1",
-    "lazy-cache": "^0.2.3",
+    "get-value": "^2.0.2",
+    "lazy-cache": "^1.0.3",
     "sliced": "^1.0.1"
   },
   "devDependencies": {
