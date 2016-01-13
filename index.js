@@ -96,7 +96,7 @@ function templateFn (str) {
   })
   return str.replace(utils.regex(), function (m, prop) {
     if (prop && prop.indexOf('.') !== -1) {
-      return utils.getValue(data, prop, true)
+      return utils.getValue(data, prop)
     }
     return typeof data[prop] !== 'undefined' ? data[prop] : ''
   })
