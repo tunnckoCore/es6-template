@@ -19,7 +19,7 @@
     "es6-template-regex": "^0.1.1",
     "extend-shallow": "^2.0.1",
     "get-value": "^2.0.2",
-    "lazy-cache": "^1.0.3",
+    "lazy-cache": "^2.0.0",
     "mkdirp": "^0.5.1",
     "sliced": "^1.0.1"
   },
