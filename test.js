@@ -6,9 +6,20 @@
  */
 'use strict'
 
-var test = require('mukla')
-// var es6template = require('./index')
+// es6template() async
+require('./test/main-async')
 
-test('foo', function (done) {
-  done()
-})
+// es6template() sync
+require('./test/main-sync')
+
+// es6template.compile() async
+require('./test/compile-async')
+
+// es6template.compile() sync
+require('./test/compile-sync')
+
+// es6template.render() async
+require('./test/render-async')
+
+// es6template.render() sync
+require('./test/render-sync')

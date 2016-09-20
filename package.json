@@ -1,7 +1,7 @@
 {
   "name": "es6-template",
   "version": "1.0.4",
-  "description": "Fun and easy es6 template engine, built on ES6 template strings working on node@0.10, too. Two lines core logic without eval, another is boilerplate.",
+  "description": "Fun and easy, sync and async es6 template engine, built on top of `gana` and ES6/ES2015 Template Strings, working on `node@0.10` too!",
   "repository": "tunnckoCore/es6-template",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "precommit.silent": true,
@@ -11,9 +11,10 @@
     "prebuild": "npm install && npm test && mkdirp dist",
     "build": "npm run bundle && npm run standalone",
     "bundle": "browserify -dr ./index.js:es6template -o dist/es6-template.js",
-    "postbundle": "uglifyjs dist/es6-template.js -m -c -o dist/es6-template.min.js",
+    "postbundle": "uglifyjs dist/es6-template.js -m -c -o dist/es6-template.min.js --source-map dist/es6-template.min.js.map",
     "standalone": "browserify -ds es6template index.js -o dist/es6-template.standalone.js",
-    "poststandalone": "uglifyjs dist/es6-template.standalone.js -m -c -o dist/es6-template.standalone.min.js",
+    "poststandalone": "uglifyjs dist/es6-template.standalone.js -m -c -o dist/es6-template.standalone.min.js --source-map dist/es6-template.standalone.min.js.map",
+    "prelint": "npm install",
     "lint": "standard --verbose",
     "pretest": "npm run lint",
     "test": "npm run coverage",
@@ -27,6 +28,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "gana": "^1.0.2",
     "is-buffer": "^1.1.4",
     "isobject": "^2.1.0",
     "lazy-cache": "^2.0.1"
