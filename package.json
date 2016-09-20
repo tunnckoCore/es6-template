@@ -8,6 +8,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prebuild": "npm install && npm test && mkdirp dist",
+    "build": "npm run bundle && npm run standalone",
+    "bundle": "browserify -dr ./index.js:es6template -o dist/es6-template.js",
+    "postbundle": "uglifyjs dist/es6-template.js -m -c -o dist/es6-template.min.js",
+    "standalone": "browserify -ds es6template index.js -o dist/es6-template.standalone.js",
+    "poststandalone": "uglifyjs dist/es6-template.standalone.js -m -c -o dist/es6-template.standalone.min.js",
     "lint": "standard --verbose",
     "pretest": "npm run lint",
     "test": "npm run coverage",
@@ -21,17 +27,22 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "is-buffer": "^1.1.4",
+    "isobject": "^2.1.0",
     "lazy-cache": "^2.0.1"
   },
   "devDependencies": {
+    "browserify": "^13.1.0",
     "commitizen": "^2.8.6",
     "coveralls": "^2.11.12",
     "cz-conventional-changelog": "^1.2.0",
+    "mkdirp": "^0.5.1",
     "mukla": "^0.4.1",
     "nyc": "^8.1.0",
     "pre-commit": "^1.1.3",
     "standard": "^8.0.0",
-    "standard-version": "^2.4.0"
+    "standard-version": "^2.4.0",
+    "uglify-js": "^2.7.3"
   },
   "files": [
     "index.js",
