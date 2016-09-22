@@ -51,15 +51,3 @@ test('sync fail: .compile(template)(object): throw ReferenceError if not in loca
   test.throws(fixture, /bar is not defined/)
   done()
 })
-
-test('.compile(file): able to accept Vinyl-like file as first arg', function (done) {
-  var file = {
-    contents: 'support ${filetype} files'
-  }
-  var fn = es6template.compile(file)
-  var str = fn({
-    filetype: 'vinyl-like'
-  })
-  test.strictEqual(str, 'support vinyl-like files')
-  done()
-})

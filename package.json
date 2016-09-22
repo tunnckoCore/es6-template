@@ -14,7 +14,6 @@
     "postbundle": "uglifyjs dist/es6-template.js -m -c -o dist/es6-template.min.js --source-map dist/es6-template.min.js.map",
     "standalone": "browserify -ds es6template index.js -o dist/es6-template.standalone.js",
     "poststandalone": "uglifyjs dist/es6-template.standalone.js -m -c -o dist/es6-template.standalone.min.js --source-map dist/es6-template.standalone.min.js.map",
-    "prelint": "npm install",
     "lint": "standard --verbose",
     "pretest": "npm run lint",
     "test": "npm run coverage",
@@ -28,10 +27,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "gana": "^1.0.2",
-    "is-buffer": "^1.1.4",
-    "isobject": "^2.1.0",
-    "lazy-cache": "^2.0.1"
+    "gana": "^1.1.0"
   },
   "devDependencies": {
     "browserify": "^13.1.0",
@@ -47,8 +43,7 @@
     "uglify-js": "^2.7.3"
   },
   "files": [
-    "index.js",
-    "utils.js"
+    "index.js"
   ],
   "keywords": [
     "es6-template"

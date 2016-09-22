@@ -48,14 +48,3 @@ test('sync throw: es6template(): ReferenceError if not in `locals`', function (d
   test.throws(fixture, /xyz is not defined/)
   done()
 })
-
-test('should be able to accept Vinyl-like file as first arg', function (done) {
-  var file = {
-    contents: 'support ${filetype} files'
-  }
-  var str = es6template(file, {
-    filetype: 'vinyl-like'
-  })
-  test.strictEqual(str, 'support vinyl-like files')
-  done()
-})

@@ -20,15 +20,6 @@ test('sync okey: .render(template, locals)', function (done) {
   done()
 })
 
-test('sync throw: .render(123): throws Error if no 2 arguments', function (done) {
-  function fixture () {
-    es6template.render(123)
-  }
-  test.throws(fixture, Error)
-  test.throws(fixture, /expect at least 2 arguments/)
-  done()
-})
-
 test('sync throw: .render(123, locals): throws TypeError if `template` not a string', function (done) {
   function fixture () {
     es6template(123, {foo: 'bar'})
