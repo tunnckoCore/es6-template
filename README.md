@@ -4,6 +4,12 @@
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
+## Background
+
+Behind the scenes es6-template uses [gana][] which in turns use [gana-compile][]. So the footprint and codebase is very small (**~1-2kb** minified and not gzipped), easy (just sync and async `.compile` and `.render` methods) and very well tested (this one has **~25 tests**).
+
+Works well on browsers and even in `node@0.10`. [Read more](https://github.com/tunnckocore/gana#background) on `gana` readme.
+
 ## Install
 ```
 npm i es6-template --save
@@ -13,7 +19,7 @@ npm i es6-template --save
 > For more use-cases see the [tests](./test.js)
 
 ```js
-const es6Template = require('es6-template')
+const es6template = require('es6-template')
 ```
 
 ## Contributing
@@ -69,4 +75,5 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
 
+[gana-compile]: https://github.com/tunnckocore/gana-compile
 [gana]: https://github.com/tunnckocore/gana

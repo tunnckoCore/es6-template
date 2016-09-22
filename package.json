@@ -46,27 +46,27 @@
     "index.js"
   ],
   "keywords": [
-    "es6-template",
-    "template",
-    "browser",
-    "tpl",
-    "sync",
+    "1kb",
     "async",
     "asynchronous",
-    "synchronous",
+    "browser",
+    "compile",
+    "easy",
+    "engine",
     "es2015",
     "es6",
-    "string",
-    "literals",
-    "gana",
-    "compile",
-    "render",
-    "engine",
-    "small",
+    "es6-template",
     "fast",
+    "gana",
+    "literals",
+    "render",
+    "small",
     "standard",
-    "easy",
-    "1kb"
+    "string",
+    "sync",
+    "synchronous",
+    "template",
+    "tpl"
   ],
   "verb": {
     "run": true,
@@ -77,7 +77,14 @@
     ],
     "lint": {
       "reflinks": true
-    }
+    },
+    "related": {
+      "list": []
+    },
+    "reflinks": [
+      "gana",
+      "gana-compile"
+    ]
   },
   "config": {
     "commitizen": {
