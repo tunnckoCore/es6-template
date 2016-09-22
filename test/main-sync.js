@@ -20,6 +20,14 @@ test('sync okey: es6template(template, locals)', function (done) {
   done()
 })
 
+test('sync okey: render correctly empty strings', function (done) {
+  var str = es6template('foo ${bar} qux', {
+    bar: ''
+  })
+  test.strictEqual(str, 'foo  qux')
+  done()
+})
+
 test('sync throw: es6template(123): throws TypeError if `template` not a string', function (done) {
   function fixture () {
     es6template(123)

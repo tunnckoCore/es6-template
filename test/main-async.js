@@ -22,6 +22,18 @@ test('async okey: es6template(template, locals, callback)', function (done) {
   })
 })
 
+test('async okey: render correctly the 0, null and undefined', function (done) {
+  es6template('count ${cnt}! ${foo}ed? and ${undef}', {
+    cnt: 0,
+    foo: null,
+    undef: undefined
+  }, function (err, str) {
+    test.ifError(err)
+    test.strictEqual(str, 'count 0! nulled? and undefined')
+    done()
+  })
+})
+
 test('async fail: es6template(): ReferenceError if not in `locals`', function (done) {
   es6template('some not existing ${bar} here', {
     qux: 'charlike'
