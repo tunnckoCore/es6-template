@@ -27,7 +27,8 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "gana": "^1.1.0"
+    "gana": "^1.1.1",
+    "try-catch-callback": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^13.1.0",

@@ -8,6 +8,7 @@
 'use strict'
 
 var gana = require('gana')
+var tryCatch = require('try-catch-callback')
 
 var es6template = module.exports = function es6template (template, locals, cb) {
   return es6template.render(template, locals, cb)
@@ -32,23 +33,4 @@ es6template.render = function render (template, locals, cb) {
     return
   }
   return gana(template)(locals)
-}
-
-/**
- * try/catch block with callback
- *
- * @param  {Function} `fn`
- * @param  {Function} `cb`
- * @api private
- */
-
-function tryCatch (fn, cb) {
-  var ret = null
-  try {
-    ret = fn()
-  } catch (err) {
-    cb(err)
-    return
-  }
-  cb(null, ret)
 }
