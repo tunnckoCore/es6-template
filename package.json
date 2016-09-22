@@ -1,7 +1,7 @@
 {
   "name": "es6-template",
   "version": "1.0.4",
-  "description": "Fun and easy, sync and async es6 template engine, built on top of `gana` and ES6/ES2015 Template Strings, working on `node@0.10` too!",
+  "description": "Small, sync and async es6 template engine, built on top of [gana][] and ES6/ES2015 Template Strings, working on `node@0.10` too!",
   "repository": "tunnckoCore/es6-template",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "precommit.silent": true,
