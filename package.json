@@ -46,7 +46,27 @@
     "index.js"
   ],
   "keywords": [
-    "es6-template"
+    "es6-template",
+    "template",
+    "browser",
+    "tpl",
+    "sync",
+    "async",
+    "asynchronous",
+    "synchronous",
+    "es2015",
+    "es6",
+    "string",
+    "literals",
+    "gana",
+    "compile",
+    "render",
+    "engine",
+    "small",
+    "fast",
+    "standard",
+    "easy",
+    "1kb"
   ],
   "verb": {
     "run": true,
