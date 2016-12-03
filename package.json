@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "gana": "^1.1.1",
-    "try-catch-callback": "^1.0.2"
+    "try-catch-callback": "^2.0.1"
   },
   "devDependencies": {
     "browserify": "^13.1.0",
