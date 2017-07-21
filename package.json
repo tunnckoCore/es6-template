@@ -28,19 +28,19 @@
   },
   "dependencies": {
     "gana": "^1.1.1",
-    "try-catch-callback": "^1.0.2"
+    "try-catch-callback": "^2.0.0"
   },
   "devDependencies": {
-    "browserify": "13.3.0",
+    "browserify": "14.4.0",
     "commitizen": "2.9.6",
     "coveralls": "2.13.1",
-    "cz-conventional-changelog": "1.2.0",
+    "cz-conventional-changelog": "2.0.0",
     "mkdirp": "0.5.1",
     "mukla": "0.4.9",
-    "nyc": "8.4.0",
+    "nyc": "11.0.3",
     "pre-commit": "1.2.2",
     "standard": "10.0.2",
-    "standard-version": "3.0.0",
+    "standard-version": "4.2.0",
     "uglify-js": "2.8.29"
   },
   "files": [
