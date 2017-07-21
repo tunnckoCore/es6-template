@@ -1,5 +1,6 @@
 {
   "pinVersions": true,
   "semanticCommits": true,
-  "depTypes": [{"depType": "dependencies", "pinVersions": false}]
+  "automerge": "minor",
+  "labels": ["deps-update"]
 }
