@@ -39,7 +39,7 @@
     "mukla": "0.4.9",
     "nyc": "8.4.0",
     "pre-commit": "1.2.2",
-    "standard": "8.6.0",
+    "standard": "10.0.2",
     "standard-version": "3.0.0",
     "uglify-js": "2.8.29"
   },
