@@ -37,7 +37,7 @@
     "cz-conventional-changelog": "2.0.0",
     "mkdirp": "0.5.1",
     "mukla": "0.4.9",
-    "nyc": "8.4.0",
+    "nyc": "9.0.1",
     "pre-commit": "1.2.2",
     "standard": "8.6.0",
     "standard-version": "3.0.0",
