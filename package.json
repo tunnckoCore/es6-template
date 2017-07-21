@@ -34,7 +34,7 @@
     "browserify": "13.3.0",
     "commitizen": "2.9.6",
     "coveralls": "2.13.1",
-    "cz-conventional-changelog": "1.2.0",
+    "cz-conventional-changelog": "2.0.0",
     "mkdirp": "0.5.1",
     "mukla": "0.4.9",
     "nyc": "8.4.0",
